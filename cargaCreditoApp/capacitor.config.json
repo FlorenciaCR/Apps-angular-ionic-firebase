@@ -1,0 +1,6 @@
+{
+	"appId": "carga.credito.app",
+	"appName": "cargaCredito",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

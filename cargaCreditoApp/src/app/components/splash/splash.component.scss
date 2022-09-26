@@ -1,0 +1,110 @@
+ion-content{
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    --ion-background-color:#ECF0F3;
+    color:#252a2f;
+
+    h1{
+        font-size: 45px;
+    }
+   .contenedor{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around
+   
+   } 
+    .divLogo{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+    img{
+        width: 95%;
+        height: 95%;
+        border-radius: 45px;
+    }
+
+    .slide-bck-center {
+        -webkit-animation: slide-bck-center 0.45s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+                animation: slide-bck-center 0.45s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .texto
+    {
+        color: white;
+        font-size:xx-large;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    .fondo
+    {
+      background: rgb(0,0,0);
+      background: linear-gradient(142deg, rgba(0,0,0,1) 35%, rgba(255,0,0,1) 73%);
+    }
+    
+    .color-change-2x {
+        animation: color-change-2x 2s linear infinite alternate both;
+    }
+    
+     @keyframes color-change-2x {
+        0% {
+          background: #000000;
+        }
+        100% {
+          background: #FF7D00;
+        }
+      }
+      
+     
+      .tilt-in-fwd-br {
+        animation: tilt-in-fwd-br 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    
+     @keyframes tilt-in-fwd-br {
+        0% {
+          transform: rotateY(20deg) rotateX(-35deg) translate(300px, 300px) skew(35deg, -10deg);
+          opacity: 0;
+        }
+        100% {
+          transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+          opacity: 1;
+        }
+      }
+      
+      
+      
+      .tilt-in-left-1 {
+        animation: tilt-in-left-1 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      }
+    
+    @keyframes tilt-in-left-1 {
+      0% {
+        transform: rotateX(-30deg) translateX(-300px) skewX(-30deg);
+        opacity: 0;
+      }
+      100% {
+        transform: rotateX(0deg) translateX(0) skewX(0deg);
+        opacity: 1;
+      }
+    }
+    
+    
+    
+     
+      
+    
+  
+}

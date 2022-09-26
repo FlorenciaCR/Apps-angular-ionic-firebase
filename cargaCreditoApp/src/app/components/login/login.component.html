@@ -1,0 +1,60 @@
+<ion-content>
+  <div class="fondo">
+    <br>
+    <div class="contenedorGeneral">
+      <br>
+      <img src="../../../assets/credito.png" class="logoUser">
+      <ion-title class="titulo2">QR</ion-title>
+      <div class="contenedorInputs">
+        <form [formGroup]="formLogin" (ngSubmit)="loguearse()" class="texto">
+          <div>
+            <ion-input placeholder="Correo" formControlName="email"></ion-input>
+            <small class="invalid"
+              *ngIf="formLogin.controls['email'].errors?.['required'] && formLogin.controls['email'].touched">
+              <label>El correo es requerido</label>
+            </small>
+            <small *ngIf="formLogin.controls['email'].errors?.['email'] &&
+                  formLogin.controls['email'].touched">
+              <label class="invalid">Formato Incorrecto</label>
+            </small>
+          </div><br>
+          <div>
+            <ion-input type="password" placeholder="Clave" formControlName="password"></ion-input>
+            <small class="invalid"
+              *ngIf="formLogin.controls['password'].errors?.['required'] && formLogin.controls['password'].touched">
+              <label>La contraseña es requerida</label>
+            </small>
+          </div><br>
+        </form>
+      </div>
+      <button type="sumbit" class="botonEntrar" [disabled]="!formLogin.valid">Entrar</button>
+    </div>
+
+
+    <div class="grupo" >
+      <ion-grid style="display: flex; flex-flow: column;">
+      <ion-row style="flex-grow: 1;">
+        <ion-col>
+          <mat-checkbox class="boton" [checked]="checkedAdmin" (change)="onChangeAdmin($event)">Administrador </mat-checkbox>
+        </ion-col>
+        <ion-col>
+          <mat-checkbox class="boton" [checked]="checkedAnoni" (change)="onChangeAnonimo($event)">Usuario</mat-checkbox>
+        </ion-col>
+        <ion-col>
+          <mat-checkbox class="boton" [checked]="checkedInvi" (change)="onChangeInvitado($event)">Invitado</mat-checkbox>
+        </ion-col>
+      </ion-row>  
+    </ion-grid>      
+    </div>
+ 
+    <!-- <ion-title class="titulo">Inicio Rapido</ion-title>
+    <ion-item color="light">
+      <ion-select interface="popover" color="medium" placeholder="Elegir usuario" (ionChange)="handleChange($event)"
+        class="select">
+        <ion-select-option value="usuario1">Admin</ion-select-option>
+        <ion-select-option value="usuario2">Invitado</ion-select-option>
+        <ion-select-option value="usuario3">Usuario</ion-select-option>
+      </ion-select>
+  </ion-item> -->
+  </div>
+</ion-content>

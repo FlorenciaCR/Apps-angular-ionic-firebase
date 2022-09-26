@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-item>
+    <h3 style="text-align: center; font-weight: bold;">✉️ 4A</h3>
+    <!-- <ion-label class="titulo">4A</ion-label> -->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+
+    <!-- <ion-fab-button color=danger> -->
+      <!-- <button style="color: #ffff; background-color: #e96258;">Atras</button> -->
+      <!--[routerLink]="['/chat4-a']"-->
+      <!-- <ion-back-button defaultHref="home"></ion-back-button> -->
+    <!-- </ion-fab-button> -->
+
+      
+  </ion-item>
+</ion-header>
+<ion-content #content [scrollEvents]="true">
+  <div class="chatCompleto">
+    <div class="contenedorMensajes" id="contenedorMensajes">
+      <div *ngFor="let mensaje of mensajes" class="cuadroMensaje"
+        [ngClass]="(usuarioActual.usuarioId==mensaje.emisor)?'enviado' : 'recibido'">
+        <ion-label class="usuarioMensaje" *ngIf="(usuarioActual.usuarioId==mensaje.emisor)==false">{{mensaje.usuario}}:
+        </ion-label>
+        <ion-label class="textoMensaje">{{mensaje.texto}}</ion-label>
+        <ion-label class="horaMensaje">{{mensaje.hora | date:'mediumDate'}}</ion-label>
+      </div>
+    </div>
+
+
+    <div class="contenedorEnviar">
+        <div class="contenedorInputMensaje">
+          <div>
+            <ion-input class="inputMensaje" placeholder="   Escribi aca..." [(ngModel)]="nuevoMensaje"
+              maxlength="21"></ion-input>
+          </div>
+          <div style="margin-right: 15px;">
+            <ion-img src="/assets/message.png" (click)="enviarMensaje()" class="iconoEnviar"></ion-img>
+          </div>
+        </div>
+    </div>
+
+
+  </div>
+</ion-content>

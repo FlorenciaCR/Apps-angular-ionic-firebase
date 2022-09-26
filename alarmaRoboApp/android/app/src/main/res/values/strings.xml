@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">alarmaRoboApp</string>
+    <string name="title_activity_main">alarmaRoboApp</string>
+    <string name="package_name">alarma.robo.app</string>
+    <string name="custom_url_scheme">alarma.robo.app</string>
+</resources>

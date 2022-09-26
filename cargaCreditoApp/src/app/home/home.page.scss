@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+ion-spinner{
+  width: 50px;
+  height: 50px;
+}
+
+ion-content{
+  --ion-background-color: #3D6D93;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  text-align: center;
+}
+
+.displayUsuario
+{
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  background-color: #000000;
+  margin-bottom: 10%;
+  margin-top: 5%;
+  text-align: center;
+  
+}
+
+.btnLogout{
+  width: 15%;
+}
+
+.iconoCerrarSesion{
+  width: 30px;
+}
+
+.textoEmail{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.titulo{
+  font-size: 35px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  margin-left:auto;
+  margin-right: auto;
+  color: black;
+  font-weight: bold;
+}
+
+.textoCreditos{
+  font-size: 180px;
+  color: #000000;
+  position: relative;
+  top:15%;
+}
+
+.contenedorCreditos{
+  border-style: outset;
+  border-color: #F58A97;
+  border-width: 5px;
+  width: 95%;
+  height: 50%;
+  margin-left: auto; 
+  margin-right: auto;
+  border-radius: 10px;
+  background-color:#f2f2f2;
+  margin-top: 5%;
+  text-align: center;
+
+}
+
+
+
+.container
+{
+  position: absolute;
+  bottom: 100px;
+  left: 110px;
+}
+
+.botonQR
+{
+    margin-top: 5%;
+    margin-bottom: 10%;
+    width: 35%;
+    height: 90px;
+    border-radius: 12px;
+    //background: #222428;
+    font-size: 15px;
+    background-color: azure;
+    border: 3px black solid;
+
+    img{
+      height: 100%;
+      width: 100%;
+    }
+}

@@ -1,0 +1,136 @@
+//@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+
+ion-item{
+    //--ion-background-color:#E1519B;
+    --background:#E1519B;
+    --padding:100%;
+
+}
+
+
+ion-content {
+    --ion-background-color: #F9DCEB;
+    overflow: hidden;
+    font-family: 'Mukta', sans-serif;
+}
+.iconoBack {
+    width: 30px;
+    position: relative;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 20px;
+}
+
+.chatCompleto {
+    height: 100%;
+    overflow: hidden;
+}
+
+.contenedorMensajes {
+    overflow-y:scroll;
+    height: 91.3%;
+}
+
+.contenedorEnviar {
+    position: absolute;
+    top:84.5%;
+    //bottom:0px;
+    width: 100%;
+    height: 100px;
+    //padding: 100px;
+    border: #e72d8d solid 1px;
+    background:#E1519B;
+    border-radius: 15px;
+
+    .contenedorInputMensaje{
+        //border: blue solid 2px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.inputMensaje {
+    width: 250px;
+    margin-right: 10%;
+    background-color: #fff;
+    border-style: none;
+    border-radius: 5px;
+    height: 40px;
+    color: black;
+    margin-left: 5%;
+    margin-bottom: 2%;;
+    margin-top: 3%;
+    border: 1px orange solid;
+}
+
+
+
+.iconoEnviar {
+    width: 45px;
+    height: 45px;
+    
+}
+
+.iconoEnviar:active {
+    transform: scale(0.9);
+}
+
+
+.enviado {
+    display: block;
+    float: right;
+    background-color: orange;
+    color: white;
+    min-width: 50.01%;
+    border-radius: 10px;
+    text-align: left;
+    padding: 7px 7px 7px 7px;
+    margin-top:0.5%;
+    margin-bottom: 0.8%;
+    margin-right: 1%;
+    margin-left: 5%;
+}
+
+.recibido {
+    display: block;
+    float: left;
+    background-color:#E878B1;
+    color: rgb(255, 255, 255);
+    min-width: 50.01%;
+    border-radius: 10px;
+    text-align: left;
+    padding: 7px 7px 7px 7px;
+    margin-top:0.5%;
+    margin-bottom: 0.8%;
+    margin-left: 1%;
+    margin-right: 5%;
+}
+
+.usuarioMensaje {
+    font-size: 15px;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    width: 100%;
+    display: block;
+    font-family: 'Mukta', sans-serif;
+}
+
+.textoMensaje{
+    font-size: 14px;
+    font-family: 'Mukta', sans-serif;
+}
+
+.horaMensaje {
+    position: relative;
+    color: rgb(43, 43, 43);
+    font-size: 11px;
+    float:right;
+    margin-top:1%;
+    margin-left:1%;
+}

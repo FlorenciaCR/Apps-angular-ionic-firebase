@@ -1,0 +1,19 @@
+<ion-content>
+  <div [ngClass]="(!alarmOnOff)?'contenedorGeneralA' : 'contenedorGeneralB'" class="contenedorGeneral">
+    <br>
+    <h1>Alarma Antirobo</h1>
+    <ion-title class="titulo2" *ngIf="alarmOnOff == false"></ion-title>
+    <ion-title class="titulo3" *ngIf="alarmOnOff">Apagar</ion-title>
+    <div class="contenedorBoton">
+      <ion-img src="/assets/power-button.png" class="botonPower" (click)="cambiarAlarma()" *ngIf="alarmOnOff == false"></ion-img>
+      <ion-img src="/assets/power.png" class="botonPower" (click)="cambiarAlarma()" *ngIf="alarmOnOff"></ion-img>
+    </div>
+    <!-- <button class="btnLogout" (click)="logout()" *ngIf="alarmOnOff == false">Cerrar Sesión</button> -->
+    <br><br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br><br><br>
+    <ion-button expand="block" color="warning" type="sumbit" expand="block" shape="round" class="botonEntrar" *ngIf="alarmOnOff == false" (click)="logout()">Cerrar sesion</ion-button>
+  </div>
+  
+</ion-content>

@@ -1,0 +1,50 @@
+
+<!-- 
+<ion-content>
+  <ion-fab horizontal="start" vertical="bottom" slot="fixed">
+    <ion-fab-button color="danger" (click)="logout()">
+      <ion-icon name="log-out-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <div class="contenedor">
+    <div class="4A">
+      <button class="chatA" [routerLink]="['/chat4-a']">
+        <h3>PPS-4A</h3>
+        <img src="../../../assets/ChatA.png" alt="">
+      </button>
+    </div>
+    <div class="4B">
+      <button  class="chatB" [routerLink]="['/chat4-b']">
+        <h3>PPS-4B</h3 >
+        <img src="../../../assets/ChatB.png"  alt="">
+      </button>
+    </div>
+  </div>
+</ion-content> -->
+
+<ion-content>
+  <ion-fab horizontal="start" vertical="bottom" slot="fixed">
+    <ion-fab-button color="danger" (click)="logout()">
+      <ion-icon name="log-out-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+
+  <div class="contenedor">
+    <div class="div4A"  [routerLink]="['/chat4-a']">
+      <div class="divImg1" >
+        <div class="titulo" >
+          <h3 style="color: white;">PPS-4A</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="div4B"  [routerLink]="['/chat4-a']">
+      <div class="divImg2">
+        <div class="titulo" >
+          <h3 style="color: white;">PPS-4B</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,64 @@
+<ion-content class="background">
+  <div id="header">
+    <img src="/assets/chat.png" id="logo">
+  </div>
+
+  <div class="wrapper">
+    <ion-card class="form-wrapper">
+      <ion-card-content>
+        <form [formGroup]="formLogin" (ngSubmit)="loguearse()" id="form">
+            <ion-input id="input" placeholder="Correo" formControlName="email"></ion-input>
+            <small style="color: red; background-color: #ffff; border-radius: 5px; padding: 4px;" class="invalid"
+              *ngIf="formLogin.controls['email'].errors?.['required'] && formLogin.controls['email'].touched">El correo
+              es requerido</small>
+            <small class="invalid" style="color: red; background-color: #ffff; border-radius: 5px; padding: 4px;" *ngIf="formLogin.controls['email'].errors?.['email'] &&
+            formLogin.controls['email'].touched">Correo invalido</small>
+          <div>
+            <ion-input style="margin-top: 10px; " type="password" placeholder="Contraseña" formControlName="password"></ion-input>
+            <small class="invalid" style="color: red; background-color: #ffff; border-radius: 5px; padding: 4px;"
+              *ngIf="formLogin.controls['password'].errors?.['required'] && formLogin.controls['password'].touched">La
+              contraseña es requerida</small>
+          </div>
+        </form>
+        
+        <ion-button style="margin-top: 10px;" expand="block" type="sumbit" expand="block" shape="round" color="success" [disabled]="!formLogin.valid">Ingresar</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+
+    <div class="contendorContent">
+      <div class="botones">
+        <div class="boton">
+          <button (click)= "logeoAutomatico('admin@admin.com','111111')" ><img src="../../assets/borde.png" alt="">Administrador</button>
+        </div>
+        <div class="boton">
+          <button (click)="logeoAutomatico('invitado@invitado.com','222222')" ><img src="../../assets/borde2.png" alt="">Invitado</button>
+        </div>
+        <div class="boton">
+          <button (click)="logeoAutomatico('usuario@usuario.com','333333')" ><img src="../../assets/borde3.png" alt="">Usuario</button>
+        </div>
+      </div>
+    
+    <!-- 
+  <ion-grid style="display: flex; flex-flow: column; ">
+    <ion-row style="text-align: center; margin-bottom: 5%; margin-top: 15%; flex-grow: 1;">
+      <ion-col>
+        <ion-button fill="outline" (click)="logeoAutomatico('admin@admin.com','111111')"  style="--border-color: #50A4AB; color: white; border-radius: 25px; --border-width: 3px; -–border-radius: 15px;">Anónimo</ion-button>              
+      </ion-col>
+      <ion-col>         
+        <ion-button fill="outline" (click)="logeoAutomatico('invitado@invitado.com','222222')" style="--border-color: #50A4AB; color: white; font-weight: bold; border-radius: 25px; --border-width: 3px;  -–border-radius: 15px;">Invitado</ion-button>     
+      </ion-col>
+      
+        <ion-col>
+          <ion-button fill="outline" (click)="logeoAutomatico('usuario@usuario.com','333')" style="--border-color: #50A4AB; color: white; border-radius: 25px; --border-width: 3px;  -–border-radius: 15px;">Administrador</ion-button>  
+        </ion-col>         
+    </ion-row>
+  </ion-grid> -->
+  </div>
+
+
+  <div class="spin" *ngIf="spinner">
+    <ion-spinner name="crescent"></ion-spinner>
+  </div>
+</ion-content>

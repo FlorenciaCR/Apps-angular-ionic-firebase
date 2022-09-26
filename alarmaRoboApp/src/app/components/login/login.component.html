@@ -1,0 +1,132 @@
+<ion-content>
+  <div id="header">
+    <div id="logo" >
+      <img  src="../../assets/alarma.png" alt="" srcset="">
+    </div>
+    <!-- <h1>Log in</h1> -->
+  </div>
+
+  <div class="wrapper">
+    <ion-item  *ngIf="mostrarError" color="danger" class="item-error">
+      <ion-label class="error" position="middle">{{errorMessage}}</ion-label>
+      <ion-icon name="close" (click)="esconderError()"></ion-icon>
+    </ion-item>
+    <ion-card class="form-wrapper">
+      <ion-card-content >
+        <form [formGroup]="formLogin" (ngSubmit)="loguearse()" class="texto" id="form">
+          <div>
+            <ion-item style="margin-top:10px;">
+              <ion-icon name="mail" style="color: #454545; margin-right: 4px;"></ion-icon>
+              <ion-input placeholder="Correo" formControlName="email"></ion-input>
+            </ion-item>
+            <small class="invalid"
+              *ngIf="formLogin.controls['email'].errors?.['required'] && formLogin.controls['email'].touched">
+              <label>El correo es requerido</label>
+            </small>
+            <small *ngIf="formLogin.controls['email'].errors?.['email'] &&
+                  formLogin.controls['email'].touched">
+              <label class="invalid">El correo no tiene el formato correcto</label>
+            </small>
+          </div><br>
+          <div>
+            <ion-item>
+              <ion-icon name="lock-closed" style="color: #454545; margin-right: 4px;"></ion-icon>
+            <ion-input type="password" placeholder="Clave" formControlName="password"></ion-input>
+            </ion-item>
+            <small class="invalid"
+              *ngIf="formLogin.controls['password'].errors?.['required'] && formLogin.controls['password'].touched">
+              <label>La contraseña es requerida</label>
+            </small>
+          </div>
+          <ion-button expand="block" color="danger" type="sumbit" expand="block" shape="round" class="botonEntrar"  [disabled]="!formLogin.valid">Ingresar</ion-button>
+        </form>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+  <div class="botones">
+    <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+     <ion-fab-button color="danger">
+       <ion-icon md="caret-back" ios="chevron-back-circle-outline"></ion-icon>
+     </ion-fab-button>
+     <ion-fab-list side="start">
+       <ion-fab-button color="danger">
+         <ion-img src="/assets/user1.png" (click)="logeoAutomatico('admin@admin.com','111111')"></ion-img>
+       </ion-fab-button>
+       <ion-fab-button color="danger">
+         <ion-img src="/assets/user2.png" (click)="logeoAutomatico('invitado@invitado.com','222222')"></ion-img>
+       </ion-fab-button>
+       <ion-fab-button color="danger">
+         <ion-img src="/assets/user1.png" (click)="logeoAutomatico('usuario@usuario.com','333333')"></ion-img>
+       </ion-fab-button>
+     </ion-fab-list>
+   </ion-fab>
+  </div>
+</ion-content>
+
+
+<!-- <ion-content>
+  <div class="fondo">
+    <br>
+    <ion-img src="/assets/app-icon.png" class="logo"></ion-img>
+    <div class="contenedorGeneral">
+      <br>
+      
+      <ion-title class="titulo">Iniciar Sesión</ion-title><br>
+      <ion-item  *ngIf="mostrarError" color="danger" class="item-error">
+        <ion-label class="error" position="middle">{{errorMessage}}</ion-label>
+        <ion-icon name="close" (click)="esconderError()"></ion-icon>
+      </ion-item>
+      <div class="contenedorInputs">
+        <form [formGroup]="formLogin" (ngSubmit)="loguearse()" class="texto">
+          <div>
+            <ion-item color="dark">
+              <ion-input placeholder="Correo" formControlName="email"></ion-input>
+              <ion-icon name="person-outline"></ion-icon>
+            </ion-item>
+            <small class="invalid"
+              *ngIf="formLogin.controls['email'].errors?.['required'] && formLogin.controls['email'].touched">
+              <label>El correo es requerido</label>
+            </small>
+            <small *ngIf="formLogin.controls['email'].errors?.['email'] &&
+                  formLogin.controls['email'].touched">
+              <label class="invalid">El correo no tiene el formato correcto</label>
+            </small>
+          </div><br>
+          <div>
+            <ion-item color="dark">
+            <ion-input type="password" placeholder="Contraseña" formControlName="password"></ion-input>
+            <ion-icon name="key-outline"></ion-icon>
+            </ion-item>
+            <small class="invalid"
+              *ngIf="formLogin.controls['password'].errors?.['required'] && formLogin.controls['password'].touched">
+              <label>La contraseña es requerida</label>
+            </small>
+          </div>
+          <button type="sumbit" class="botonEntrar" [disabled]="!formLogin.valid">Ingresar</button>
+        </form>
+      </div>
+
+
+      <ion-title class="titulo2">Inicio Rapido:</ion-title>
+      <ion-chip class="chip1" (click)="logeoAutomatico('admin@admin.com','111111')">
+        <ion-avatar>
+          <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+        </ion-avatar>
+        <ion-label class="textoChip">Admin</ion-label>
+      </ion-chip>
+      <ion-chip class="chip2" (click)="logeoAutomatico('invitado@invitado.com','222222')">
+        <ion-avatar>
+          <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+        </ion-avatar>
+        <ion-label class="textoChip">Invitado</ion-label>
+      </ion-chip>
+      <ion-chip class="chip3" (click)="logeoAutomatico('usuario@usuario.com','3333')">
+        <ion-avatar>
+          <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+        </ion-avatar>
+        <ion-label class="textoChip">Usuario</ion-label>
+      </ion-chip>
+    </div>
+  </div>
+</ion-content> -->

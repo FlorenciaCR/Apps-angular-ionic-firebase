@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+ion-content{
+  font-family: 'Roboto', sans-serif;
+  --ion-background-color: red;
+  text-align: center;
+}
+h1{
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-weight: bold;
+  background-color:black;
+  padding: 5px;
+
+}
+
+.contenedorGeneralA{
+  text-align: center;
+  height: 100%;
+  font-family: 'Arvo', serif;
+  background-color: red;
+}
+.contenedorGeneralB{
+  text-align: center;
+  height: 100%;
+  font-family: 'Arvo', serif;
+  background-color:#0CA656;
+}
+
+.titulo{
+  margin-top:10%;
+  color:white;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.titulo2{
+  margin-top:30%;
+  font-size: 30px;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+.titulo3{
+  margin-top:30%;
+  font-size: 30px;
+  color: #ff3c35;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+.contenedorBoton{
+  position: absolute;
+  width: 100%;
+}
+
+.botonPower{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.botonPower:active{
+  transform: scale(0.9);
+}
+
+.btnLogout{
+  position: relative;
+  width: 60%;
+  height: 60px;
+  background-color: #ff3c35;
+  top:50%;
+}

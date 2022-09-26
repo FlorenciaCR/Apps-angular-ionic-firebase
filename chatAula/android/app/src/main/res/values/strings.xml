@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">chatAulaApp</string>
+    <string name="title_activity_main">chatAulaApp</string>
+    <string name="package_name">chat.aula.app</string>
+    <string name="custom_url_scheme">chat.aula.app</string>
+</resources>

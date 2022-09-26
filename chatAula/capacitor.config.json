@@ -1,0 +1,6 @@
+{
+	"appId": "chat.aula.app",
+	"appName": "chatAulaApp",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

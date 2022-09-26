@@ -1,0 +1,132 @@
+// @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+ion-content{
+    --ion-background-color: #8FD8FA;
+    text-align: center;
+}
+
+
+.grupo {
+    display: flex;
+    flex-direction: row;
+    margin-top: 14%;
+   
+    align-items: center;
+    font-size: larger;
+    background-color: #2d5a7d;
+  }
+
+  .boton {
+    margin: 5px;
+  }
+
+.example-section {
+ 
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  }
+
+
+.fondo {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+
+.contenedorGeneral {
+    background-color: #3D6D93;
+    width: 85%;
+    min-height: 430px;
+    margin-top: 10%;
+    margin-left:auto;
+    margin-right:auto;
+    //box-shadow: 10px 10px #888888;
+    //font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 16px;
+    border-radius: 15px;
+}
+
+.titulo {
+    font-size: 30px;
+    color: black;
+    margin-top:5%;
+}
+
+.titulo2{
+    font-size: 25px;
+    color: black;
+    margin-top:10%;
+}
+
+.logoUser{
+    width: 50%;
+    border: 3px solid white;
+    border-radius: 80px;
+    margin-left:auto;
+    margin-right: auto;
+
+}
+
+
+.contenedorInputs {
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #3D6D93;
+}
+
+
+ion-input {
+    background-color: rgba(255, 255, 255, 0.781);
+    width: 90%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 5%;
+    text-align: left;
+    color: black;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+ion-item{
+    width: 62%;
+    margin-left:20%;
+    margin-top:40%;
+    box-shadow: 5px 5px #b3b1b1;
+}
+
+.botonEntrar {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 80%;
+    height: 40px;
+    border-radius: 2px;
+    background: rgb(230, 103, 103);
+    font-size: 15px;
+    
+}
+
+.invalid {
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    color: rgb(230, 103, 103);
+    font-size: 15px;
+}
+
+.iconoUsuario {
+    width: 60px;
+}
+
+.iconoUsuario:active {
+    transform: scale(0.9);
+}
+
+.select{
+    margin-left: auto;
+    margin-right: auto;
+}
