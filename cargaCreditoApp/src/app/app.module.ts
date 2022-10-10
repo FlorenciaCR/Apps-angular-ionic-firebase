@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
-
+import {MatCheckboxModule, MAT_CHECKBOX_DEFAULT_OPTIONS} from '@angular/material/checkbox';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
@@ -12,11 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatCheckboxModule, MAT_CHECKBOX_DEFAULT_OPTIONS} from '@angular/material/checkbox';
-//import { MatSliderModule } from '@angular/material/slider';
-
 @NgModule({
   declarations: [AppComponent, LoginComponent, SplashComponent],
   imports: [BrowserModule,
@@ -27,12 +23,9 @@ import {MatCheckboxModule, MAT_CHECKBOX_DEFAULT_OPTIONS} from '@angular/material
     AngularFirestoreModule,
     BrowserAnimationsModule,
     MatCheckboxModule
- 
+
   ],
-  providers: [{ 
-    provide: RouteReuseStrategy, useClass: IonicRouteStrategy,
-    //provide: MAT_CHECKBOX_DEFAULT_OPTIONS
-  }],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

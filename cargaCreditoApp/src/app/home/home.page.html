@@ -1,14 +1,17 @@
 <ion-content>
-  <h6 class="titulo">Credito QR</h6>
+  <h6 class="titulo">Crédito QR</h6>
   <p style="color:whitesmoke">{{authService.email}}</p>
   <ion-button color="danger" (click)="vaciarCredito()" [disabled]="this.creditoActual == 0">
     <ion-icon  name="trash" color='warning' ></ion-icon>
-    Borrar creditos
+    Borrar créditos
   </ion-button>
-
+<div class="contenedor">
   <div class="contenedorCreditos">
-    <ion-label class="textoCreditos">{{this.creditoActual}}</ion-label>
+    <div>
+      <ion-label class="textoCreditos">{{this.creditoActual}}</ion-label>
+    </div>
   </div>
+</div>
 
   <div>
     <div *ngIf="cargando" style="margin-top: 5%;">
@@ -20,8 +23,6 @@
     </button>
   </div>
   
-
-
   <ion-fab horizontal="start" vertical="bottom" slot="fixed">
     <ion-fab-button color="danger" (click)="logout()">
       <ion-icon name="log-out-outline"></ion-icon>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
 
 ion-spinner{
   width: 50px;
@@ -7,7 +7,7 @@ ion-spinner{
 
 ion-content{
   --ion-background-color: #3D6D93;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
+  //font-family: 'M PLUS Rounded 1c', sans-serif;
   text-align: center;
 }
 
@@ -32,13 +32,13 @@ ion-content{
   width: 30px;
 }
 
-.textoEmail{
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-}
+//.textoEmail{
+  //font-family: 'M PLUS Rounded 1c', sans-serif;
+//}
 
 .titulo{
   font-size: 35px;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
+  //font-family: 'M PLUS Rounded 1c', sans-serif;
   margin-left:auto;
   margin-right: auto;
   color: black;
@@ -46,23 +46,35 @@ ion-content{
 }
 
 .textoCreditos{
-  font-size: 180px;
+  font-size: 160px;
   color: #000000;
   position: relative;
   top:15%;
 }
 
+.contenedor{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 47%;
+  //border: 2px solid red
+}
 .contenedorCreditos{
   border-style: outset;
   border-color: #F58A97;
   border-width: 5px;
-  width: 95%;
-  height: 50%;
-  margin-left: auto; 
-  margin-right: auto;
+  width: 90%;
+  height: 72%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // margin-left: auto; 
+  // margin-right: auto;
   border-radius: 10px;
   background-color:#f2f2f2;
-  margin-top: 5%;
+  //margin-top: 5%;
   text-align: center;
 
 }
@@ -80,8 +92,8 @@ ion-content{
 {
     margin-top: 5%;
     margin-bottom: 10%;
-    width: 35%;
-    height: 90px;
+    width: 50%;
+    height: 50%;
     border-radius: 12px;
     //background: #222428;
     font-size: 15px;

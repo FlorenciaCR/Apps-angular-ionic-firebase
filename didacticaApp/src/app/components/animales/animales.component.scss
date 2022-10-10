@@ -1,0 +1,116 @@
+.boton
+{
+    height: 100%;
+}
+
+.contenedorImagen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.fila{
+    height: 100%;
+}
+
+.caja
+{
+    border-style: solid;
+    border-color: #096C6F;//rgba(255, 255, 255, 0.463);
+    border-radius: 15px;
+    height: 98%;
+    width: 100%;
+    //box-shadow: 5px 4px 2px 2px #940c0c;
+    background-color: #0CAFA9;
+    margin-left: auto;
+    margin-right: auto;
+    border:5px solid #096C6F;
+}
+
+.cajaFinal{
+    border-style: solid;
+    border-color:#096C6F;// rgba(255, 255, 255, 0.463);
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
+    //box-shadow: 5px 4px 2px 2px #940c0c;
+    background-color: #0CAFA9;
+    border:5px solid #096C6F;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.caja2
+{
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.463);
+    border-radius: 10px;
+    //box-shadow: 5px 4px 2px 2px #940c0c;
+    //background-color: #ff5f5f;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 97%;
+}
+
+.fotos{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.fotoFinal{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.fotosHorizontales{
+    margin-left: auto;
+    margin-right: auto;
+    width: 58%;
+}
+
+.fotos2Horizontales{
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+}
+
+.gridVertical
+{
+    width: 100%;
+    height: 99%; 
+    display: flex; 
+    flex-flow: column; 
+    border:none;
+}
+
+.gridHorizontal
+{
+    height: 99%;
+    display: flex;
+    flex-flow: column;
+}
+
+@media (min-height:600px){
+    .gridVertical{
+        display: flex; 
+    }
+    .gridHorizontal{
+        display: none;
+    }
+}
+
+@media(max-height: 600px){
+    .gridVertical{
+        display: none;        
+    }
+    .gridHorizontal{
+        display: flex;
+    }
+}

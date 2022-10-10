@@ -18,6 +18,6 @@ export class FirestoreService {
 
   modificarPerfil(perfil : any,id : any)
   {
-    return this.firestore.collection('usuarios').doc(id).update(perfil);
+    return this.firestore.collection('perfiles').doc(id).update(perfil);
   }
 }

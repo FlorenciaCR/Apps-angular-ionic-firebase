@@ -1,0 +1,16 @@
+<div *ngIf="this.perfil == 1">
+  <div style="margin-bottom: 10px;" *ngFor="let item of this.misFotos">
+  <ion-card [ngClass]="(item.tipo=='linda')?'cosasLindas' : 'cosasFeas'">
+      <img src="{{item.datos.pathFoto}}" />
+      <ion-card-header>
+      <ion-card-subtitle>{{item.datos.hora}}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="contenedorLikes">
+          <ion-icon name="heart-sharp"  style="color: rgb(209, 37, 37);"></ion-icon>
+          <ion-label class="numeroLikes">{{item.datos.likes.length}}</ion-label>
+        </div>
+      </ion-card-content>
+  </ion-card>
+  </div>
+</div>   

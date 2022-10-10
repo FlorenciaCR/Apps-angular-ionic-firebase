@@ -1,0 +1,202 @@
+
+ion-content{
+  --background: #FFD15C;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  overflow-y:hidden;
+
+  .contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+    .titulo{
+      text-align: center;
+        padding: 10px;
+        background-color: black;
+        border-radius: 10px;
+        color: WHITE;
+    }
+
+    .div4A{
+      height: 48%;
+      width: 98%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #E878B1;;
+
+
+      .divImg1{
+        height: 100%;
+        width: 100%;
+        background-image: url('../../../assets/cosalinda3.jpg');
+        background-repeat:no-repeat;
+        background-position:center;
+        background-size:cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        //background-attachment:center center;
+
+      
+      }
+
+
+
+    }
+
+    .div4B{
+      height: 48%;
+      width: 98%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #66C6B9;
+
+      .divImg2{
+        height: 100%;
+        width: 100%;
+        background-image: url('../../../assets/cosafea3.jpg');
+        background-repeat:no-repeat;
+        background-position:center;
+        background-size:cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        //background-attachment:center center;
+        
+      }
+    }  
+
+}
+
+
+
+ion-header{
+  text-align: center;
+  //--background-color: #66C6B9;
+} 
+
+.btnCerrarSesion {
+  margin-top: 30%;
+  margin-bottom: 10%;
+  width: 180px;
+  height: 40px;
+  border-radius: 10px;
+  background: #3538ff;
+  font-size: 15px;
+}
+
+.header{
+  --ion-background-color: rgb(241, 130, 40);
+  //--background: linear-gradient(#3538ff, #ff4e4e);
+  //--background: #66C6B9;
+  //--border-radius: 30px;
+}
+
+
+
+.tituloHeader{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  border-radius: 30px;
+}
+
+.tituloHeader2{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  border-radius: 30px;
+}
+
+.contenedorTitulo{
+  width: 60%;
+  background: linear-gradient(#ff4e4e,#3538ff);
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  margin-top:10%;
+}
+
+.titulo{
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  color: black;
+}
+
+.iconGraphics{
+  width: 15%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:2%;
+  -moz-box-shadow: 0px 6px 5px rgb(82, 82, 82);
+  -webkit-box-shadow: 0px 6px 5px rgb(82, 82, 82);
+  box-shadow: 3px 3px 10px rgb(82, 82, 82);
+  //-moz-border-radius:190px;
+ // -webkit-border-radius:190px;
+}
+
+.iconGraphics:active{
+  transform: scale(0.9);
+}
+
+.contenedorBotones {
+  width: 100%;
+  height: 75%;
+  margin-top: 5%;
+  text-align: center;
+}
+
+
+.botonChatA {
+  width: 95%;
+  height: 50%;
+  -webkit-box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
+  border-width: 3px;
+  border-style: inset;
+  border-color:rgb(66, 156, 66);
+  font-size: 20px;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+  background-image: url('/assets/lindas.jpg');
+  background-size:100% 100%;
+}
+
+.botonChatB {
+  margin-top: 5%;
+  width: 95%;
+  height: 50%;
+  -webkit-box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
+  border-width: 3px;
+  border-style: inset;
+  border-color:rgb(96, 46, 189);
+  font-size: 20px;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+  background-image: url('/assets/feas.jpg');
+  background-size:100% 100%;
+}
+
+.iconoLike{
+  width: 100px;
+  margin-left:auto;
+  margin-right: auto;
+  margin-top:15%;
+}

@@ -1,0 +1,96 @@
+<ion-content>
+  <!-- <ion-fab horizontal="start" vertical="top" slot="fixed" *ngIf="this.opcion == 0 && this.perfil == 0">
+    <ion-fab-button color="danger" style="width: 50px; height: 50px;" (click)="logout()">
+      <ion-icon name="log-out-outline" style="font-size: 30px;"></ion-icon>
+    </ion-fab-button>
+  </ion-fab> -->
+
+  <ion-fab horizontal="start" vertical="bottom" slot="fixed"  *ngIf="this.opcion == 0 && this.perfil == 0">
+    <ion-fab-button color="danger" (click)="logout()">
+      <ion-icon name="log-out-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+
+  <ion-header  color="tertiary" *ngIf="this.opcion != 0 || this.perfil != 0">
+    <ion-item class="header">
+      <ion-title color="success" *ngIf="this.opcion == 1 && this.perfil == 0" class="tituloHeader">Cosas lindas💟</ion-title>
+
+      <ion-title color="danger" *ngIf="this.opcion == 2 && this.perfil == 0" class="tituloHeader2" color="danger" >Cosas feas❌</ion-title>
+      <ion-title *ngIf="this.opcion == 3 && this.perfil == 0" class="tituloHeader">Gráficos 📊</ion-title>
+      <ion-title *ngIf="this.perfil != 0" class="tituloHeader">Mis Fotos</ion-title>
+    </ion-item>
+  </ion-header>
+
+
+  <!-- <div class="contenedorTitulo" *ngIf="this.opcion==0">
+    <ion-title class="titulo">Inicio</ion-title>
+  </div> -->
+  <div (click)="mostrarGraficos()"  *ngIf="this.opcion==0"><h4 style="color: white; background-color: #3eac45; padding:10px; border-radius: 35px;">Ver gráficos📊</h4></div>
+
+  <!-- <ion-img src="assets/graphics.png" class="iconGraphics" (click)="mostrarGraficos()"  *ngIf="this.opcion==0"></ion-img> -->
+
+
+  <!-- <div class="contenedorBotones" *ngIf="this.opcion==0">
+    <button class="botonChatA" (click)="mostrarCosasLindas()"></button><br>
+    <button class="botonChatB" (click)="mostrarCosasFeas()"></button>
+  </div> -->
+
+  <div class="contenedor" *ngIf="this.opcion==0">
+    <div class="div4A"  (click)="mostrarCosasLindas()">
+      <div class="divImg1" >
+        <div class="titulo" >
+          <h3 style="color: white;">Cosas lindas</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="div4B"  (click)="mostrarCosasFeas()">
+      <div class="divImg2">
+        <div class="titulo" >
+          <h3 style="color: white;">Cosas feas</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div *ngIf="(this.opcion ==1 || this.opcion==2) && this.perfil == 0">
+    <app-cosas-lindas-feas [opcion]="this.opcion"></app-cosas-lindas-feas>
+  </div>
+  <div *ngIf="this.opcion == 3 && this.perfil == 0">
+    <app-graficos></app-graficos>
+  </div>
+  <div *ngIf="this.perfil != 0">
+    <app-perfil [perfil]="this.perfil"></app-perfil>
+  </div>
+
+
+  <ion-spinner *ngIf="this.cargando" name="crescent"></ion-spinner>
+
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed" *ngIf="this.opcion != 0 || this.perfil != 0">
+    <ion-fab-button color="dark">
+      <ion-icon name="settings-sharp"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button color="warning" (click)="cargarPerfil(0)" *ngIf="this.perfil != 0">
+        <ion-icon name="folder-open"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="warning" (click)="cargarPerfil(1)" *ngIf="this.perfil != 1">
+        <ion-icon name="images-sharp"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="success" (click)="subirFoto()" *ngIf="this.perfil == 0">
+        <ion-icon name="add-circle-sharp" style="font-size: 40px;"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list side="start">
+      <ion-fab-button color="dark" (click)="volverInicio()">
+        <ion-icon name="home"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="danger" (click)="logout()">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

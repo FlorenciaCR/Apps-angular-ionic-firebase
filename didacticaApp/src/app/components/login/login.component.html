@@ -1,0 +1,62 @@
+
+
+
+
+<ion-content class="background">
+  <ion-fab horizontal="start" vertical="top" slot="fixed" style="margin-top: 20px;">
+    <ion-fab-button color="tertiary">
+      <ion-icon md="caret-forward" ios="chevron-forward-circle-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="end">
+      <ion-fab-button color="contrast">
+        <img src="assets/girl.png" alt="" (click)="logeoAutomatico('admin@admin.com','111111')" >
+      </ion-fab-button>
+      <ion-fab-button color="contrast">
+        <img src="assets/boy.png" alt=""  (click)="logeoAutomatico('invitado@invitado.com','222222')">
+      </ion-fab-button>
+      <ion-fab-button color="contrast">
+        <img src="assets/girl2.png" alt=""  (click)="logeoAutomatico('usuario@usuario.com','333333')">
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <div class="contenido">
+
+    <div id="header">
+      <!-- <h1>Login</h1> -->
+      <img src="assets/didactica.png" alt="">
+    </div>
+  
+  
+  
+  <div class="form">
+  
+    <form [formGroup]="this.formLogin" (ngSubmit)="loguearse()" id="form">
+        <ion-input placeholder="Email" formControlName="email" ><ion-icon name="person"  ></ion-icon></ion-input>
+     
+        <small class="invalid"
+        *ngIf="this.formLogin.controls['email'].errors?.['required'] && this.formLogin.controls['email'].touched">
+        <label style="color: red;">El email es requerido</label>
+        </small>
+        <small class="invalid" *ngIf="this.formLogin.controls['email'].errors?.['email'] &&
+        this.formLogin.controls['email'].touched">
+        <ion-label style="color: red;" >El email no tiene el formLoginto correcto</ion-label>
+        </small>
+  
+      
+        <ion-input type="password" placeholder="Clave" formControlName="password" ><ion-icon name="key"></ion-icon></ion-input>
+    
+        <small class="invalid" 
+                        *ngIf="this.formLogin.controls['password'].errors?.['required'] && this.formLogin.controls['password'].touched">
+                        <ion-label style="color: red;">El password es requerido</ion-label>  
+        </small>
+  
+      <ion-button  color="tertiary" type="sumbit" expand="block" shape="round" [disabled]="!this.formLogin.valid">Entrar</ion-button>
+    </form>
+  </div>
+  </div>
+
+
+
+
+</ion-content>

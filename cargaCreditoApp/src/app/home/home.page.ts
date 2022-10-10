@@ -21,7 +21,7 @@ export class HomePage {
 
   ngOnInit() {
     this.cargando = true;
-    this.firestore.getCollectionWithId('usuarios','usuarioId').subscribe((value)=>{
+    this.firestore.getCollectionWithId('perfiles','perfilId').subscribe((value)=>{
       this.perfiles = value;
       for (let item of this.perfiles) 
       {
@@ -52,7 +52,7 @@ export class HomePage {
           this.establecerCarga(10);
           if(this.usuario.credito == this.usuario.maximo)
           {
-            this.MostrarToast('Su crédito se encuentra al máximo',"Crédito máximo","light").then((toast : any) => {
+            this.MostrarToast('Credito al maximo!!!!⚠️',"","light").then((toast : any) => {
               toast.present();
             });
             this.maximoAlcanzado = true;
@@ -62,7 +62,7 @@ export class HomePage {
           this.establecerCarga(50);
           if(this.usuario.credito == this.usuario.maximo)
           {
-            this.MostrarToast('Su crédito se encuentra al máximo',"Crédito máximo","light").then((toast : any) => {
+            this.MostrarToast('Credito al maximo!!!!⚠️',"","light").then((toast : any) => {
               toast.present();
             });
             this.maximoAlcanzado = true;
@@ -72,7 +72,7 @@ export class HomePage {
           this.establecerCarga(100);
           if(this.usuario.credito == this.usuario.maximo)
           {
-            this.MostrarToast('Su crédito se encuentra al máximo',"Crédito máximo","light").then((toast : any) => {
+            this.MostrarToast('Credito al maximo!!!!⚠️',"","light").then((toast : any) => {
               toast.present();
             });
             this.maximoAlcanzado = true;
@@ -108,13 +108,13 @@ export class HomePage {
       {
         this.usuario.credito += valor;
         variable1++;
-        this.MostrarToast('Crédito de ' + valor + ' cargado con exito!',"Crédito Cargado","success").then((toast : any) => {
+        this.MostrarToast('Credito: ' + valor + ' cargado!👍🏼',"","success").then((toast : any) => {
           toast.present();
         });
       }
       else
       {
-        this.MostrarToast('Solo puede usar ese codigo 2 veces',"Error","danger").then((toast : any) => {
+        this.MostrarToast('No puede usar el codigo mas de 2 veces‼️',"","danger").then((toast : any) => {
           toast.present();
         });
       }
@@ -125,13 +125,13 @@ export class HomePage {
       {
         this.usuario.credito += valor;
         variable1 ++;
-        this.MostrarToast('Crédito de ' + valor + ' cargado con exito!',"Crédito Cargado","success").then((toast : any) => {
+        this.MostrarToast('Credito: ' + valor + ' cargado!👍🏼',"","success").then((toast : any) => {
           toast.present();
         });
       }
       else
       {
-        this.MostrarToast('Solo puede usar ese codigo 1 vez',"Error","danger").then((toast : any) => {
+        this.MostrarToast('Solo puede usar una vez‼️',"","danger").then((toast : any) => {
           toast.present();
         });
       }
@@ -153,7 +153,7 @@ export class HomePage {
       }
     }
 
-    this.firestore.modificarPerfil(this.usuario,this.usuario.usuarioId);
+    this.firestore.modificarPerfil(this.usuario,this.usuario.perfilId);
   }
 
   MostrarToast(message : string, header : string, color : string)
@@ -176,8 +176,8 @@ export class HomePage {
     this.creditoActual = 0;
     this.maximoAlcanzado = false;
 
-    this.firestore.modificarPerfil(this.usuario,this.usuario.usuarioId).then(() =>{
-      this.MostrarToast('Se han eliminado los créditos con exito',"Créditos eliminados","primary").then((toast : any) => {
+    this.firestore.modificarPerfil(this.usuario,this.usuario.perfilId).then(() =>{
+      this.MostrarToast('Se borarron los creditos!',"","success").then((toast : any) => {
         toast.present();
       });
     })
@@ -185,7 +185,7 @@ export class HomePage {
 
   vaciarCredito()
   {
-    this.MostrarToastVaciar("Eliminara su credito ¿desea continuar?","","warning").then((toast : any) => {
+    this.MostrarToastVaciar("Quiere eliminar el credito?⚠️ ","","primary").then((toast : any) => {
       toast.present();
     }); 
   }

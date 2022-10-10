@@ -1,0 +1,85 @@
+
+ion-content {
+    display: flex;
+    --ion-background-color:#A4D4A3;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    
+    .contenedor {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around
+    }
+
+    .divLogo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -webkit-animation: rotate-scale-up 1s linear 20 backwards;
+        animation: rotate-scale-up 1s linear 20 backwards;
+    }
+
+    ion-img {
+        width: 75%;
+        height: 75%;
+    }
+
+    img{
+        border-radius: 90px;
+        width: 160px;
+        height: 160px;
+    }
+
+    .textoNombre{
+        font-family: 'Roboto', sans-serif;
+        font-size: 40px;
+    }
+
+    .textoCurso{
+        font-family: 'Roboto', sans-serif;
+        font-size: 70px;
+    }
+}
+
+
+/**
+ * ----------------------------------------
+ * animation rotate-scale-up
+ * ----------------------------------------
+ */
+@-webkit-keyframes rotate-scale-up {
+    0% {
+        -webkit-transform: scale(1) rotateZ(0);
+        transform: scale(1) rotateZ(0);
+    }
+
+    50% {
+        -webkit-transform: scale(2) rotateZ(180deg);
+        transform: scale(2) rotateZ(180deg);
+    }
+
+    100% {
+        -webkit-transform: scale(1) rotateZ(360deg);
+        transform: scale(1) rotateZ(360deg);
+    }
+}
+
+@keyframes rotate-scale-up {
+    0% {
+        -webkit-transform: scale(1) rotateZ(0);
+        transform: scale(1) rotateZ(0);
+    }
+
+    50% {
+        -webkit-transform: scale(2) rotateZ(180deg);
+        transform: scale(2) rotateZ(180deg);
+    }
+
+    100% {
+        -webkit-transform: scale(1) rotateZ(360deg);
+        transform: scale(1) rotateZ(360deg);
+    }
+}

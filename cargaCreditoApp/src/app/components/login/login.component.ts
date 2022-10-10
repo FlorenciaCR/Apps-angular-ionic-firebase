@@ -3,13 +3,8 @@ import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/authService/auth.service';
 import { ToastController } from '@ionic/angular';
+import { Key } from 'protractor';
 import { MatCheckboxChange } from '@angular/material/checkbox';
-
-//import { Key } from 'protractor';
-//import {ThemePalette} from '@angular/material/core';
-//import { $ } from 'protractor';
-//import {ThemePalette} from '@angular/material/core';
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

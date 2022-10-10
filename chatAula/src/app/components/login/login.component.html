@@ -14,7 +14,7 @@
             <small class="invalid" style="color: red; background-color: #ffff; border-radius: 5px; padding: 4px;" *ngIf="formLogin.controls['email'].errors?.['email'] &&
             formLogin.controls['email'].touched">Correo invalido</small>
           <div>
-            <ion-input style="margin-top: 10px; " type="password" placeholder="Contraseña" formControlName="password"></ion-input>
+            <ion-input style="margin-top: 10px; " type="password" placeholder="Clave" formControlName="password"></ion-input>
             <small class="invalid" style="color: red; background-color: #ffff; border-radius: 5px; padding: 4px;"
               *ngIf="formLogin.controls['password'].errors?.['required'] && formLogin.controls['password'].touched">La
               contraseña es requerida</small>

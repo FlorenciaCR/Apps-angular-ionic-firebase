@@ -1,0 +1,44 @@
+<div>
+  <div *ngIf="opcion == 1">
+    <div *ngFor="let item of this.cosasLindas; let i = index" data-index="i">
+      <ion-card class="cosasLindas">
+        <img src="{{item.pathFoto}}" />
+        <ion-card-header>
+          <ion-card-title>{{item.email}}</ion-card-title>
+          <ion-card-subtitle>{{item.hora}}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <div class="contenedorLikes">
+            <ion-icon color="danger" id="{{i}}" name="heart-sharp" (click)="cambiarLike(item,i)" style="color: rgb(209, 37, 37); "
+              *ngIf="item.likes.indexOf(this.authService.actualEmail) != -1"></ion-icon>
+
+            <ion-icon id="{{i}}"  color="danger" name="heart-sharp" (click)="cambiarLike(item,i)"
+              *ngIf="item.likes.indexOf(this.authService.actualEmail) == -1" style="color: rgb(0, 0, 0);"></ion-icon>
+            <ion-label class="numeroLikes">{{item.likes.length}}</ion-label>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+  <div *ngIf="opcion == 2">
+    <div *ngFor="let item of this.cosasFeas; let i = index" data-index="i">
+      <ion-card class="cosasFeas">
+        <img src="{{item.pathFoto}}" />
+        <ion-card-header>
+          <ion-card-title>{{item.email}}</ion-card-title>
+          <ion-card-subtitle>{{item.hora}}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <div class="contenedorLikes">
+            <ion-icon  color="danger" id="{{i}}" name="heart-sharp" (click)="cambiarLike(item,i)" style="color: rgb(209, 37, 37);"
+              *ngIf="item.likes.indexOf(this.authService.actualEmail) != -1"></ion-icon>
+            <ion-icon color="danger" id="{{i}}" name="heart-sharp" (click)="cambiarLike(item,i)"
+              *ngIf="item.likes.indexOf(this.authService.actualEmail) == -1" style="color: rgb(0, 0, 0);">
+              {{item.likes.length}}</ion-icon>
+            <ion-label class="numeroLikes">{{item.likes.length}}</ion-label>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</div>

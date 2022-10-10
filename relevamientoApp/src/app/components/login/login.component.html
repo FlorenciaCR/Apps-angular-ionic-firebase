@@ -1,0 +1,118 @@
+<!-- <ion-content>
+  <div class="fondo">
+    <br>
+    <ion-img src="/assets/app-icon.png" class="logo"></ion-img>
+    <div class="contenedorGeneral">
+      <br>
+      <ion-title class="titulo">Iniciar Sesion</ion-title>
+      <div class="contenedorInputs">
+        <form [formGroup]="formLogin" (ngSubmit)="loguearse()">
+          <ion-input placeholder="Correo" formControlName="email"></ion-input>
+          <small class="invalid"
+            *ngIf="formLogin.controls['email'].errors?.['required'] && formLogin.controls['email'].touched">
+            <label>El correo es requerido</label>
+          </small>
+          <small *ngIf="formLogin.controls['email'].errors?.['email'] &&
+                  formLogin.controls['email'].touched">
+            <label class="invalid">El correo no tiene el formato correcto</label>
+          </small>
+          <br>
+          <ion-input type="password" placeholder="Contraseña" formControlName="password"></ion-input>
+          <small class="invalid"
+            *ngIf="formLogin.controls['password'].errors?.['required'] && formLogin.controls['password'].touched">
+            <label>La contraseña es requerida</label>
+          </small><br>
+          <button type="sumbit" class="botonEntrar">Entrar</button>
+        </form>
+      </div>
+    </div>
+    <button class="btnVoice">
+      <ion-img src="assets/mic.svg" class="iconVoice" (click)="ingresoPorVoz()"></ion-img>
+    </button>
+  </div>
+</ion-content> -->
+
+<!-- <ion-header class="tituloLogin">
+  <h1 style="text-align: center; margin-top: 90px">Relevamiento Visual</h1>
+</ion-header> -->
+<ion-content class="background">
+  <div id="header">
+    <img src="assets/relevamiento.png" alt="">
+  </div>
+  
+  <!-- <ion-grid style="display: flex; flex-flow: column; ">
+    <ion-row style="text-align: center; margin-bottom: 5%; margin-top: 15%; flex-grow: 1;">
+      <ion-col>
+        <ion-button fill="outline" (click)='LoginAdmin()' style="--border-color: #50A4AB; color: white; border-radius: 25px; --border-width: 3px; -–border-radius: 15px;">Anónimo</ion-button>              
+      </ion-col>
+      <ion-col>         
+        <ion-button fill="outline" (click)='LoginInvitado()' style="--border-color: #50A4AB; color: white; font-weight: bold; border-radius: 25px; --border-width: 3px;  -–border-radius: 15px;">Invitado</ion-button>     
+      </ion-col>
+      
+        <ion-col>
+          <ion-button fill="outline" (click)='LoginUsuario()' style="--border-color: #50A4AB; color: white; border-radius: 25px; --border-width: 3px;  -–border-radius: 15px;">Administrador</ion-button>  
+        </ion-col>         
+    </ion-row>
+  </ion-grid> -->
+    <form novalidate (ngSubmit)="loguearse()" [formGroup]="formLogin"  id="form">
+        <div class="form-group">
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="  Correo"
+            formControlName="email"
+          />
+          <div class="invalid-feedback" style="font-family: sans-serif;">
+            <small class="invalid"
+            *ngIf="formLogin.controls['email'].errors?.['required'] && formLogin.controls['email'].touched">
+            <label>El correo es requerido</label>
+            </small>
+            <small *ngIf="formLogin.controls['email'].errors?.['email'] &&
+                  formLogin.controls['email'].touched">
+            <label class="invalid">El correo no tiene el formato correcto</label>
+          </small>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="form-group">
+         
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="  Clave"
+            formControlName="password"
+          />
+          <div class="invalid-feedback" style="font-family: sans-serif;">
+            <small class="invalid"
+            *ngIf="formLogin.controls['password'].errors?.['required'] && formLogin.controls['password'].touched">
+            <label>La contraseña es requerida</label>
+          </small>
+          </div>
+        </div>
+        <ion-button
+          type="submit"
+          color="tertiary" type="sumbit" expand="block" shape="round"
+        >
+          Ingresar
+        </ion-button>
+    </form>
+    <br><br><br><br><br><br><br><br><br>
+
+    <ion-item color="tertiary">
+      <ion-select interface="popover" placeholder="ELEGIR USUARIO👨🏼"
+        class="select" (ionChange)="handleChange($event)">
+        <ion-select-option value="usuario1">Admin</ion-select-option>
+        <ion-select-option value="usuario2">Invitado</ion-select-option>
+        <ion-select-option value="usuario3">Usuario</ion-select-option>
+      </ion-select>
+  </ion-item>
+
+
+<!-- <div class="spin" *ngIf="spinner">
+<ion-spinner name="crescent"></ion-spinner>
+</div> -->
+</ion-content>

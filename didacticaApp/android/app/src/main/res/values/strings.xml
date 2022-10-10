@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">didacticaApp</string>
+    <string name="title_activity_main">didacticaApp</string>
+    <string name="package_name">didactica.app</string>
+    <string name="custom_url_scheme">didactica.app</string>
+</resources>

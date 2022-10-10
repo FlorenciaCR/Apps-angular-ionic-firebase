@@ -1,0 +1,299 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+// ion-content{
+//     --ion-background-color: rgb(179, 234, 255);
+//     width: 100%;
+//     text-align: center;
+// }
+
+// .fondo {
+//     width: 100%;
+//     height: 100%;
+//     text-align: center;
+// }
+
+// .logo {
+//     width: 150px;
+//     margin-left:auto;
+//     margin-right:auto;
+//     margin-top: 5%;
+// }
+
+// .titulo {
+//     font-size: 35px;
+//     margin-top: 5%;
+// }
+
+// .contenedorGeneral {
+//     text-align: center;
+//     background-color: rgb(255, 78, 78);
+//     width: 80%;
+//     min-height:60%;
+//     margin-top: 5%;
+//     margin-left: 10%;
+//     border-radius: 20px;
+//     -webkit-box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
+//     -moz-box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
+//     box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
+//     font-family: 'Roboto', sans-serif;
+// }
+
+// .contenedorInputs {
+//     margin-top: 13%;
+//     width: 100%;
+//     display: flex;
+//     justify-content: center;
+// }
+
+// ion-input {
+//     background-color: rgba(255, 255, 255, 0.781);
+//     border-radius: 10px;
+//     width: 100%;
+//     height: 60px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     margin-top: 10%;
+//     margin-bottom: 5%;
+//     text-align: left;
+//     color: black;
+//     border-color: #3538ff;
+//     border-width: 2px;
+//     border-style: groove;
+// }
+
+// .botonEntrar {
+//     margin-top: 15%;
+//     width: 100%;
+//     height: 25%;
+//     border-radius: 10px;
+//     background: #3538ff;
+//     font-size: 20px;
+// }
+
+// .invalid {
+//     color: rgb(255, 255, 255);
+//     font-size: 15px;
+//     position: absolute;
+//     transform: translateX(-50%);
+//     width: 100%;
+// }
+
+// .btnVoice{
+//     border-radius: 50%;
+//     width: 22%;
+//     height: 10%;
+//     background: rgb(53, 56, 255);
+//     background: linear-gradient(0deg, rgba(53, 56, 255, 1) 0%, rgba(255, 78, 78, 1) 100%);
+//     margin-top:13%;
+// }
+
+// .btnVoice:active{
+//     transform: scale(0.9);
+// }
+
+// .iconVoice{
+//     width: 80%;
+//     margin-left: auto;
+//     margin-right: auto;
+// }
+
+// .tituloLogin {
+//   overflow: hidden;
+// }
+
+// .login {
+//   width: 20rem;
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   margin-right: -50%;
+//   transform: translate(-50%, -50%);
+// }
+// .card{
+//     background-color: rgb(255, 255, 255);
+//     border-radius: 15px;
+//     border: none;
+//     color: black;
+// }
+// .ion-header{
+//     border: none;
+// }
+
+// #msjError {
+//   display: none;
+// }
+// #drop1{
+//   border-radius: 20px;
+// }
+// .msjError{
+//     text-align: center;
+//     background-color: #ffffff00;
+//     color: #A12732;
+//     width: 15rem;
+
+//     font-size: large;
+// }
+
+// .aligncenter {
+//   text-align: center;
+// }
+
+// .spin{
+//   position: fixed;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// }
+// ion-spinner {
+//   width: 28px;
+//   height: 28px;
+//   stroke: rgb(20, 170, 35);
+//   fill: rgb(186, 30, 155);
+// }
+
+
+// ion-content.background {
+//   --background: url("../../assets/img/photo3.png")center center fixed no-repeat;
+//   background-size: contain;
+//   @media only screen and (max-height: 800px) {
+//   background-size: contain;
+//     }
+// }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+
+    ion-input{
+        margin-top: 10px;
+        font-size: 18px;
+        --padding-top:20px;
+        --padding-botton:15px;
+        --padding-start:5px;
+        text-decoration: none;
+        border-radius: 50px;
+        box-shadow: 1px 8px 8px 0px rgba(0,0,0,0.08);
+        background-color:#ffff;
+        color: #444546;
+
+        ion-icon{
+            margin: 15px;
+        }
+    }
+
+ion-toolbar{
+    --background:#f5f5f3;
+}
+
+// ion-item{
+//     --background: #F26100;
+//     --color: black bold;
+// }
+
+ion-select {
+    color: white !important; 
+    //opacity: black 1 !important;//placeholder color
+    //--opacity: 0.33 !important;
+    //--opacity: 1 !important;
+    //color: #f5f5f3;
+    //opacity: 0.33 !important;
+}
+
+ion-content{
+    //--background: url("../../assets/fondoEdificio.jpg")no-repeat 100% 100%;
+
+
+    --background: url("../../../assets/fondoEdificio.jpg") 0 0/100% 100% no-repeat;
+
+    .form-group{
+        text-align: center;
+    }
+    input{
+        background-color: #f5f5f3;
+        width: 90%;
+        height: 40px;
+        border-radius: 20px;
+        border-color: #87dd88;
+        padding: 15px;
+
+
+    }
+    
+    .invalid{
+        color:red;
+        font-weight: bold;
+    }
+
+    #header{
+        //border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        h1{
+            font-weight: 700;
+            font-size: 26px;
+            color: #444546;
+            margin-bottom: 8%;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid #ffff;
+
+        }
+    }
+
+   
+    #form{
+        margin-top: 10%;
+        padding-left: 30px;
+        padding-right: 30px;
+
+
+        ion-button{
+            margin-top:25px;
+            height:48px;
+            font-size: 18px;
+            text-transform: initial;
+            border-radius: 50px;
+            box-shadow: 1px 8px 8px 0px rgba(0,0,0,0.05);
+            --box-shadow:none;
+            background-color: #515390;
+            
+        }
+
+        
+    }
+
+
+    .divBtnRapidos{
+        //border: blue solid 1px;
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+
+        .btnRapidos{
+            width: 80%;
+            //border: red solid 1px;
+            display: flex;
+            justify-content: space-around;
+    
+            img{
+                height: 45px;
+                width: 45px;
+                border-radius: 30px;
+                box-shadow: 1px 8px 8px 0px rgba(0,0,0,0.2);
+              
+
+            }
+
+            .iconoUsuario1:active{
+                transform: scale(0.9);
+            }
+            img:hover{
+                cursor: pointer;
+                transition: 2s;
+            }
+        }
+    }
+}

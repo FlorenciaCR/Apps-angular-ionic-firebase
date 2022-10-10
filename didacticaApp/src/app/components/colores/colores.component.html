@@ -1,0 +1,67 @@
+<ion-grid class="gridVertical">
+  <ion-row style="flex-grow: 1;" class="fila">
+    <ion-col class="cajaRosa" style="margin-right:10px;" (click)="reproducirSonido('rosa')">
+      <div align="center" class="contenedorImagen1">
+        <!-- <img src="../../../assets/colores/rosa.png" class="fotos" alt=""> -->
+      </div>
+    </ion-col>
+    <ion-col class="caja" style="background-color: green;" (click)="reproducirSonido('verde')">
+      <div align="center" class="contenedorImagen2">
+        <!-- <img src="../../../assets/colores/verde.png" class="fotos" alt=""> -->
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <ion-row style="flex-grow: 1;" class="fila">
+    <ion-col class="cajaRojo" style="margin-right:10px;" (click)="reproducirSonido('rojo')">
+      <div align="center" class="contenedorImagen3">
+        <!-- <img src="../../../assets/colores/rojo.png" class="fotos" alt=""> -->
+      </div>
+    </ion-col>
+    <ion-col class="cajaCeleste" (click)="reproducirSonido('celeste')">
+      <div align="center" class="contenedorImagen4">
+        <!-- <img src="../../../assets/colores/celeste.png" class="fotos" alt=""> -->
+      </div>
+
+    </ion-col>
+  </ion-row>
+  <ion-row style="flex-grow: 1;" class="fila">
+    <ion-col size="12" class="cajaFinal" style="background-color: yellow;" (click)="reproducirSonido('amarillo')">
+      <div align="center" class="contenedorImagen5">
+        <!-- <img src="../../../assets/colores/amarillo.png" class="fotoFinal" alt=""> -->
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-grid class="gridHorizontal">
+  <ion-row style="flex-grow: 1;">
+    <ion-col class="caja2" style="margin-right:10px; background-color: rgb(249, 151, 167);" (click)="reproducirSonido('rosa')">
+      <div align="center" class="contenedorImagen" style="background-color: rgb(249, 151, 167);">
+        <!-- <img src="../../../assets/colores/rosa.png" class="fotosHorizontales" alt=""> -->
+      </div>
+    </ion-col>
+    <ion-col class="caja2" style="margin-right:10px; background-color: green;" (click)="reproducirSonido('verde')">
+      <div align="center" class="contenedorImagen" style="background-color: green;">
+        <!-- <img src="../../../assets/colores/verde.png" class="fotosHorizontales" alt=""> -->
+      </div>
+    </ion-col>
+    <ion-col class="caja2" style="margin-right:10px; background-color: red;" (click)="reproducirSonido('rojo')">
+      <div align="center" class="contenedorImagen" style="background-color: red;">
+        <!-- <img src="../../../assets/colores/rojo.png" class="fotosHorizontales" alt=""> -->
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row style="flex-grow: 1;">
+    <ion-col class="caja2" style="margin-right:10px; background-color: rgb(124, 204, 231);" (click)="reproducirSonido('celeste')">
+      <div align="center" class="contenedorImagen" style="background-color: rgb(124, 204, 231);">
+        <!-- <img src="../../../assets/colores/celeste.png" class="fotos2Horizontales" alt=""> -->
+      </div>
+    </ion-col>
+    <ion-col class="caja2" style="margin-right:10px; background-color: yellow;" (click)="reproducirSonido('amarillo')">
+      <div align="center" class="contenedorImagen" style="background-color: yellow;">
+        <!-- <img src="../../../assets/colores/amarillo.png" class="fotos2Horizontales" alt=""> -->
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>

@@ -1,0 +1,36 @@
+ion-card {
+    margin: 5%;
+}
+
+ion-card-subtitle {
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    padding: 6px;
+    border-radius: 10px;
+}
+.cosasLindas {
+    background-color: #6DC9C9;
+    border-radius: 15px;
+
+}
+
+.cosasFeas {
+    background-color:#CA8A5E;
+}
+
+.contenedorLikes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.numeroLikes {
+    color: black;
+    margin-left: 1%;
+    margin-top:1px;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 4px;
+    padding: 3px;
+}

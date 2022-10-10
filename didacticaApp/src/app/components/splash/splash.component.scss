@@ -1,0 +1,87 @@
+//@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@600&display=swap');
+
+ion-content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    
+    --ion-background-color: rgb(252, 193, 85);
+   
+    
+    .contenedor {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .divLogo {
+        width: 100%;
+        position: relative;
+        top:3%;
+    }
+
+    .divTexto {
+        position: relative;
+        top: 3%;
+    }
+
+    .divLoading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        margin-top:30%;
+        border-radius: 80px;
+    }
+
+    .logoImg {
+        width: 70%;
+        margin-left:40%;
+        -webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        border-radius: 80px;
+    }
+
+    .loadingImg {
+        width: 100%;
+    }
+
+    .texto {
+        position: relative;
+        font-family: 'Advent Pro', sans-serif;
+        font-size: 55px;
+        color: black;
+        background-color: bisque;
+        padding: 10px;
+        border-radius: 15px;
+    }
+}
+/**
+ * ----------------------------------------
+ * animation slide-left
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-100px);
+              transform: translateX(-100px);
+    }
+  }
+  @keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-100px);
+              transform: translateX(-100px);
+    }
+  }

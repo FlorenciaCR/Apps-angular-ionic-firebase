@@ -1,4 +1,7 @@
-<app-splash *ngIf="!this.cargarTerminada" ></app-splash>
-<ion-app *ngIf="this.cargarTerminada" >
+<app-splash *ngIf="cargarTerminada == false"></app-splash>
+<ion-app *ngIf="cargarTerminada" class="scanner-hide">
   <ion-router-outlet></ion-router-outlet>
 </ion-app>
+<div class="scanner-ui">
+
+</div>

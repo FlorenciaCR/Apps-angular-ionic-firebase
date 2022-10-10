@@ -1,0 +1,6 @@
+{
+	"appId": "relevamiento.app",
+	"appName": "relevamientoApp",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
